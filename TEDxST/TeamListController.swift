@@ -124,7 +124,8 @@ class TeamListController: PFQueryTableViewController, UIViewControllerTransition
             
             if let controller = segue.destinationViewController as? TeamDetailViewController {
                 
-                let selectedCell = tableView.cellForRowAtIndexPath(tableView.indexPathForSelectedRow!) as! TeamCell!
+                let indexPath = tableView.indexPathForSelectedRow();
+                let selectedCell = tableView.cellForRowAtIndexPath(indexPath!) as! TeamCell!
                 
                 controller.transitioningDelegate = self
                 controller.currentObject = selectedCell.parseObject

@@ -141,7 +141,8 @@ class SpeakerListController: PFQueryTableViewController, UIViewControllerTransit
 
             if let controller = segue.destinationViewController as? SpeakerDetailViewController {
                 
-                let selectedCell = tableView.cellForRowAtIndexPath(tableView.indexPathForSelectedRow!) as! SpeakerCell!
+                let indexPath = tableView.indexPathForSelectedRow();
+                let selectedCell = tableView.cellForRowAtIndexPath(indexPath!) as! SpeakerCell!
                 
                 controller.transitioningDelegate = self
                 controller.currentObject = selectedCell.parseObject

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20661C731B4F075E001BEF6A /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */; };
+		20661C751B4F076C001BEF6A /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */; };
 		3716FB8C1B4C9E3E00ADAA94 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716FB8A1B4C9E3E00ADAA94 /* TeamDetailViewController.swift */; };
 		3722C73B1B4D97C800488FF4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73A1B4D97C800488FF4 /* EventViewController.swift */; };
 		3722C73E1B4D97D300488FF4 /* LicenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73C1B4D97D300488FF4 /* LicenseCell.swift */; };
@@ -15,12 +17,10 @@
 		372CC2781B4B332500FAC40C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2771B4B332500FAC40C /* CFNetwork.framework */; };
 		372CC27A1B4B333000FAC40C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2791B4B333000FAC40C /* CoreGraphics.framework */; };
 		372CC27C1B4B333800FAC40C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC27B1B4B333800FAC40C /* CoreLocation.framework */; };
-		372CC27E1B4B335800FAC40C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC27D1B4B335800FAC40C /* libz.1.2.5.tbd */; };
 		372CC2801B4B336600FAC40C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC27F1B4B336600FAC40C /* MobileCoreServices.framework */; };
 		372CC2821B4B336F00FAC40C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2811B4B336F00FAC40C /* QuartzCore.framework */; };
 		372CC2841B4B337A00FAC40C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2831B4B337A00FAC40C /* Security.framework */; };
 		372CC2881B4B339000FAC40C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2871B4B339000FAC40C /* SystemConfiguration.framework */; };
-		372CC28A1B4B339E00FAC40C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2891B4B339E00FAC40C /* libsqlite3.0.tbd */; };
 		3766CCFD1B4C4B5900C11531 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3766CCFB1B4C4B5900C11531 /* Images.xcassets */; };
 		3766CCFE1B4C4B5900C11531 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3766CCFC1B4C4B5900C11531 /* LaunchScreen.xib */; };
 		3766CD051B4C4B8400C11531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD021B4C4B8400C11531 /* AppDelegate.swift */; };
@@ -51,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		3716FB8A1B4C9E3E00ADAA94 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamDetailViewController.swift; path = TEDxST/TeamDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		3722C73A1B4D97C800488FF4 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = TEDxST/EventViewController.swift; sourceTree = SOURCE_ROOT; };
 		3722C73C1B4D97D300488FF4 /* LicenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseCell.swift; path = TEDxST/LicenseCell.swift; sourceTree = SOURCE_ROOT; };
@@ -105,12 +107,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				372CC28A1B4B339E00FAC40C /* libsqlite3.0.tbd in Frameworks */,
+				20661C751B4F076C001BEF6A /* libz.1.2.5.dylib in Frameworks */,
+				20661C731B4F075E001BEF6A /* libsqlite3.0.dylib in Frameworks */,
 				372CC2881B4B339000FAC40C /* SystemConfiguration.framework in Frameworks */,
 				372CC2841B4B337A00FAC40C /* Security.framework in Frameworks */,
 				372CC2821B4B336F00FAC40C /* QuartzCore.framework in Frameworks */,
 				372CC2801B4B336600FAC40C /* MobileCoreServices.framework in Frameworks */,
-				372CC27E1B4B335800FAC40C /* libz.1.2.5.tbd in Frameworks */,
 				372CC27C1B4B333800FAC40C /* CoreLocation.framework in Frameworks */,
 				372CC27A1B4B333000FAC40C /* CoreGraphics.framework in Frameworks */,
 				372CC2781B4B332500FAC40C /* CFNetwork.framework in Frameworks */,
@@ -281,6 +283,8 @@
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */,
+				20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */,
 				372CC2891B4B339E00FAC40C /* libsqlite3.0.tbd */,
 				372CC2871B4B339000FAC40C /* SystemConfiguration.framework */,
 				372CC2831B4B337A00FAC40C /* Security.framework */,
@@ -512,6 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,6 +527,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.krishaamer.TEDxST;
 				PRODUCT_NAME = TEDxST;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEDxST/TEDxST-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -533,6 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,6 +550,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.krishaamer.TEDxST;
 				PRODUCT_NAME = TEDxST;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEDxST/TEDxST-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

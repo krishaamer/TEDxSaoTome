@@ -17,10 +17,10 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         
-        let tabBarItem0 = self.tabs.items![0] as UITabBarItem
-        let tabBarItem1 = self.tabs.items![1] as UITabBarItem
-        let tabBarItem2 = self.tabs.items![2] as UITabBarItem
-        let tabBarItem3 = self.tabs.items![3] as UITabBarItem
+        let tabBarItem0 = self.tabs.items![0] as! UITabBarItem
+        let tabBarItem1 = self.tabs.items![1] as! UITabBarItem
+        let tabBarItem2 = self.tabs.items![2] as! UITabBarItem
+        let tabBarItem3 = self.tabs.items![3] as! UITabBarItem
         
         tabBarItem0.title = "Evento"
         tabBarItem0.image = UIImage.fontAwesomeIconWithName(FontAwesome.Calendar, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
