@@ -27,14 +27,17 @@ class SpeakerDetailViewController: UIViewController {
 
             if let name:String = obj["name"] as? String {
                 self.speakerName.text = name
+                self.speakerName.alpha = 0
             }
         
             if let bio:String = obj["speaker_bio"] as? String {
                 self.speakerBio.text = bio
+                self.speakerBio.alpha = 0
             }
 
             if let talkTitle:String = obj["talk_title"] as? String {
                 self.speakerTalkTitle.text = talkTitle
+                self.speakerTalkTitle.alpha = 0
             }
             
             if let photo:PFFile = self.currentObject["img"] as? PFFile {
@@ -42,6 +45,7 @@ class SpeakerDetailViewController: UIViewController {
                 self.speakerImageBig.file = photo
                 self.speakerImageBig.loadInBackground()
                 self.speakerImageBig.contentMode = UIViewContentMode.ScaleAspectFill
+                self.speakerImageBig.alpha = 0.0
             }
         }
         
@@ -52,6 +56,7 @@ class SpeakerDetailViewController: UIViewController {
         
         super.viewDidLoad()
     }
+    
     
     func handlePan(sender: UIPanGestureRecognizer){
         if(sender.state == UIGestureRecognizerState.Ended){
@@ -64,8 +69,14 @@ class SpeakerDetailViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        // Do Something
+        
+        speakerImageBig.fadeIn()
+        speakerBio.fadeIn()
+        speakerName.fadeIn()
+        speakerTalkTitle.fadeIn()
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

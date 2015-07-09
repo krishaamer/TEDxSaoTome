@@ -35,10 +35,14 @@ class TeamListController: PFQueryTableViewController, UIViewControllerTransition
         tableView.backgroundView?.contentMode = UIViewContentMode.ScaleAspectFill
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.alpha = 0
         
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        tableView.fadeIn()
+    }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -66,16 +70,6 @@ class TeamListController: PFQueryTableViewController, UIViewControllerTransition
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
-    }
-    
-    override func viewDidDisappear(animated: Bool)  {
-        super.viewDidDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
-    func onContentSizeChange(notification: NSNotification) {
-        tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> TeamCell {
@@ -110,26 +104,5 @@ class TeamListController: PFQueryTableViewController, UIViewControllerTransition
         }
         
         return cell!
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        self.performSegueWithIdentifier("team", sender: self)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if (segue.identifier == "team") {
-            
-            if let controller = segue.destinationViewController as? TeamDetailViewController {
-                
-                let indexPath = tableView.indexPathForSelectedRow();
-                let selectedCell = tableView.cellForRowAtIndexPath(indexPath!) as! TeamCell!
-                
-                controller.transitioningDelegate = self
-                controller.currentObject = selectedCell.parseObject
-            }
-        }
     }
 }

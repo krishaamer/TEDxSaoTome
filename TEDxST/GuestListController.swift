@@ -35,8 +35,13 @@ class GuestListController: PFQueryTableViewController, UIViewControllerTransitio
         tableView.backgroundView?.contentMode = UIViewContentMode.ScaleAspectFill
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.alpha = 0
         
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        tableView.fadeIn()
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

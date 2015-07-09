@@ -9,7 +9,7 @@
 class RDLabel: UILabel {
     
     override func drawTextInRect(rect: CGRect) {
-        let newRect = CGRectInset(rect, 8, 8)
+        let newRect = CGRectInset(rect, 15, 15)
         super.drawTextInRect(newRect)
     }
 }

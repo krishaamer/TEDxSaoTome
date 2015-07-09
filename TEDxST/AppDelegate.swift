@@ -47,8 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
         onboardingVC.shouldFadeTransitions = true
         onboardingVC.fontName = "Helvetica-Light";
-        onboardingVC.titleFontSize = 24;
-        onboardingVC.bodyFontSize = 19;
+        onboardingVC.titleFontSize = 26;
+        onboardingVC.bodyFontSize = 23;
         onboardingVC.topPadding = 0;
         onboardingVC.underIconPadding = 10;
         onboardingVC.underTitlePadding = 15;

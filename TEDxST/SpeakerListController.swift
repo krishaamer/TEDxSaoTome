@@ -31,9 +31,10 @@ class SpeakerListController: PFQueryTableViewController, UIViewControllerTransit
     override func viewDidLoad() {
         
         tableView.registerNib(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        self.tableView.rowHeight = 130
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg"))
-        self.tableView.backgroundView?.contentMode = UIViewContentMode.ScaleAspectFill
+        tableView.rowHeight = 130
+        tableView.backgroundView = UIImageView(image: UIImage(named: "bg"))
+        tableView.backgroundView?.contentMode = UIViewContentMode.ScaleAspectFill
+        tableView.alpha = 0
         
         super.viewDidLoad()
     }
@@ -58,12 +59,29 @@ class SpeakerListController: PFQueryTableViewController, UIViewControllerTransit
         return 1
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+        tableView.fadeIn()
+        
+        let cells = tableView.visibleCells()
+        let tableHeight: CGFloat = tableView.bounds.size.height
+        
+        for i in cells {
+            let cell: UITableViewCell = i as! SpeakerCell
+            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
+        }
+        
+        var index = 0
+        
+        for a in cells {
+            let cell: UITableViewCell = a as! SpeakerCell
+            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: {
+                cell.transform = CGAffineTransformMakeTranslation(0, 0);
+                }, completion: nil)
+            
+            index += 1
+        }
 
-        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-        UIView.animateWithDuration(0.25, animations: {
-            cell.layer.transform = CATransform3DMakeScale(1,1,1)
-        })
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> SpeakerCell {

@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		20661C731B4F075E001BEF6A /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */; };
 		20661C751B4F076C001BEF6A /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */; };
-		3716FB8C1B4C9E3E00ADAA94 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716FB8A1B4C9E3E00ADAA94 /* TeamDetailViewController.swift */; };
+		20661C7B1B4F2915001BEF6A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20661C7A1B4F2915001BEF6A /* UIViewExtension.swift */; };
+		20661C7D1B4F2921001BEF6A /* BigLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20661C7C1B4F2921001BEF6A /* BigLabel.swift */; };
 		3722C73B1B4D97C800488FF4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73A1B4D97C800488FF4 /* EventViewController.swift */; };
 		3722C73E1B4D97D300488FF4 /* LicenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73C1B4D97D300488FF4 /* LicenseCell.swift */; };
 		3722C73F1B4D97D300488FF4 /* LicenseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73D1B4D97D300488FF4 /* LicenseListController.swift */; };
@@ -53,7 +54,8 @@
 /* Begin PBXFileReference section */
 		20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
-		3716FB8A1B4C9E3E00ADAA94 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamDetailViewController.swift; path = TEDxST/TeamDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		20661C7A1B4F2915001BEF6A /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = TEDxST/UIViewExtension.swift; sourceTree = SOURCE_ROOT; };
+		20661C7C1B4F2921001BEF6A /* BigLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigLabel.swift; path = TEDxST/BigLabel.swift; sourceTree = SOURCE_ROOT; };
 		3722C73A1B4D97C800488FF4 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = TEDxST/EventViewController.swift; sourceTree = SOURCE_ROOT; };
 		3722C73C1B4D97D300488FF4 /* LicenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseCell.swift; path = TEDxST/LicenseCell.swift; sourceTree = SOURCE_ROOT; };
 		3722C73D1B4D97D300488FF4 /* LicenseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseListController.swift; path = TEDxST/LicenseListController.swift; sourceTree = SOURCE_ROOT; };
@@ -210,7 +212,6 @@
 				3766CD091B4C4B9100C11531 /* TeamCell.swift */,
 				3766CD0A1B4C4B9100C11531 /* TeamCell.xib */,
 				3766CD0B1B4C4B9100C11531 /* TeamListController.swift */,
-				3716FB8A1B4C9E3E00ADAA94 /* TeamDetailViewController.swift */,
 			);
 			name = Team;
 			path = ../../TEDxST/TEDxST;
@@ -240,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				3766CD2F1B4C521800C11531 /* RDLabel.swift */,
+				20661C7C1B4F2921001BEF6A /* BigLabel.swift */,
+				20661C7A1B4F2915001BEF6A /* UIViewExtension.swift */,
 			);
 			name = Util;
 			path = ../../TEDxST/TEDxST;
@@ -404,6 +407,8 @@
 			files = (
 				3766CD1D1B4C4BA900C11531 /* SpeakerListController.swift in Sources */,
 				3766CD0D1B4C4B9100C11531 /* TeamCell.swift in Sources */,
+				20661C7B1B4F2915001BEF6A /* UIViewExtension.swift in Sources */,
+				20661C7D1B4F2921001BEF6A /* BigLabel.swift in Sources */,
 				3722C73B1B4D97C800488FF4 /* EventViewController.swift in Sources */,
 				3766CD051B4C4B8400C11531 /* AppDelegate.swift in Sources */,
 				3766CD241B4C4BC300C11531 /* FontAwesome.swift in Sources */,
@@ -412,7 +417,6 @@
 				3766CD2E1B4C4BDB00C11531 /* OnboardingViewController.m in Sources */,
 				3766CD271B4C4BCF00C11531 /* HSL.swift in Sources */,
 				3766CD221B4C4BC300C11531 /* Enum.swift in Sources */,
-				3716FB8C1B4C9E3E00ADAA94 /* TeamDetailViewController.swift in Sources */,
 				3766CD071B4C4B8400C11531 /* MainTabBarController.swift in Sources */,
 				3722C73F1B4D97D300488FF4 /* LicenseListController.swift in Sources */,
 				3766CD0F1B4C4B9100C11531 /* TeamListController.swift in Sources */,

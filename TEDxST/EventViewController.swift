@@ -13,9 +13,17 @@ class EventViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
+        self.scrollView.alpha = 0.0
         
-        self.scrollView.contentSize.height=1000
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        self.scrollView.contentSize.height=1500
+        self.scrollView.fadeIn()
+        
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
